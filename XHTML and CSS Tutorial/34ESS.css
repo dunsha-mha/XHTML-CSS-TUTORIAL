@@ -1,0 +1,10 @@
+/* This is the external style sheet rules being applied to the other 2 webpages.
+This is a practical way to manage the styles of multiple webpage quickly. */
+
+h1 {color:purple;}
+
+p {font-family:Tahoma;
+  color:red;
+  font-size: 20px;}
+
+a {color:orange;}

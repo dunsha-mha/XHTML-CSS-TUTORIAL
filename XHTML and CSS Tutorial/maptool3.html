@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<style>
+			#map {
+				height: 400px;
+				width: 100%;	
+			}
+		</style>
+		<!--Calls jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<h1 align="center">Agero Geolocation Tool - Beta Version 1.0</h1>
+		<div id="map"></div>
+		<script>		
+			function initMap(){
+				var lowell = {lat: 42.637573, lng: -71.325544};
+				var map = new google.maps.Map(document.getElementById('map'),
+				{
+					zoom: 7,
+					center: lowell
+				});
+				var marker = new google.maps.Marker({
+				
+					position: lowell,
+					map: map
+				});
+			}
+		</script>
+		
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+		
+		<script>
+  		// Initialize Firebase
+  			var config = {
+    		apiKey: "AIzaSyCqKquMr5_NCsnmTCJHhM71zzhZ3Kdw-fo",
+    		authDomain: "map-tool-176220.firebaseapp.com",
+    		databaseURL: "https://map-tool-176220.firebaseio.com",
+    		projectId: "map-tool-176220",
+    		storageBucket: "map-tool-176220.appspot.com",
+    		messagingSenderId: "160151436908"
+  			};
+			firebase.initializeApp(config);
+		</script>
+		
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?n/
+		key=AIzaSyD6qo69FVBGavA-OehJ77n1lFxf_7IdwhA&callback=initMap">
+		
+		
+		
+		</script>
+		<!--
+			Pending:
+			var vendorID: add query request for query request.
+			var username: add query request for username or device ID.
+			var dtstart: add query request for date start.
+			var dtend: add query for date end.
+		-->
+		
+		<h3 align="center">To search geolocation please fill out the fields below.</h3>
+		<h4 align="left">Vendor ID:</h4><input type="vendorID" value ="Vendor ID"/>
+		<h4 align="left">Username:</h4><input type="username" value =" Username"/>
+		<h4 align="left">Date Start:</h4><input type="dtstart" value ="mm/dd/yyyy"/>
+		<h4 align="left">Date End:</h4><input type="dtend" /></br>
+		<button>Search:</button>
+		
+		<!--
+			Pending:
+			var vendorID
+		
+		
+		
+		
+		
+		
+	</body>	
+</html>
